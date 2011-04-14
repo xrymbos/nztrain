@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :emails_as_text %>
-    <%= f.text_field :emails_as_text %>
+    <%= f.label :emails_as_text %> (whitespace separated)<br/>
+    <%= f.text_area :emails_as_text %>
   </div>
   <div class="actions">
     <%= f.submit %>
