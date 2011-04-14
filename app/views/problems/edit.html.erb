@@ -1,0 +1,23 @@
+<h1>Editing <%= @problem.title %></h1>
+
+<script> $(function() { $("#problem-tabs").tabs(); }); </script>
+
+<div id="problem-tabs">
+  <ul>
+    <li><a href="#settings-tab">Settings</a></li>
+    <li><a href="#statement-tab">Statement</a></li>
+    <li><a href="#test-data-tab">Test data</a></li>
+  </ul>
+  <div id="settings-tab">
+    <%= render 'settings_form' %>
+  </div>
+  <div id="statement-tab">
+    <%= render 'statement_form' %>
+  </div>
+  <div id="test-data-tab">
+    <%= render 'test_data_tab' %>
+  </div>
+</div>
+
+<%= link_to 'Show', @problem %> |
+<%= link_to 'Back', problems_path %>

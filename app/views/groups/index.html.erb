@@ -1,0 +1,15 @@
+<h1>Listing groups</h1>
+
+<ul>
+<% @groups.each do |group| %>
+  <li>
+    <%= group.title %>
+    (<%= link_to 'Show', group %>,
+     <%= link_to 'Edit', edit_group_path(group) %>,
+     <%= link_to 'Destroy', group, :confirm => 'Are you sure?',
+             :method => :delete %>)
+  </li>
+<% end %>
+</ul>
+
+<%= link_to 'New Group', new_group_path %>

@@ -1,0 +1,28 @@
+<p>
+  <b>Source:</b>
+  <%= @submission.source %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%= @submission.language %>
+</p>
+
+<p>
+  <b>Score:</b>
+  <%= @submission.score %>
+</p>
+
+<p>
+  <b>Problem id:</b>
+  <%= @submission.problem_id %>
+</p>
+
+<p>
+  <b>User id:</b>
+  <%= @submission.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_submission_path(@submission) %> |
+<%= link_to 'Back', submissions_path %>

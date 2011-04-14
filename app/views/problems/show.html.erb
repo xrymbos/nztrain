@@ -1,0 +1,20 @@
+<h1><%= @problem.title %></h1>
+<p>
+  <b>Input:</b> <%= @problem.input %> <br/>
+  <b>Output:</b> <%= @problem.output %> <br/>
+  <b>Time Limit:</b> <%= @problem.time_limit %> <br/>
+  <b>Memory Limit:</b>  <%= @problem.memory_limit %> <br/>
+</p>
+
+TODO: parse statement through markup thing.
+<p>
+  <%= @problem.statement %>
+</p>
+
+<h3>Submit!</h3>
+<%= render 'submissions/form' %>
+
+<%= link_to 'Edit', edit_problem_path(@problem) %> or
+<%= link_to 'delete', @problem,
+  :confirm => 'Are you sure?', :method => :delete %> this problem.
+  (TODO: access lists)

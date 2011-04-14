@@ -1,0 +1,7 @@
+this is taken from the moe website so we should definitely give credit and
+comply with their license etc blah blah just chuckin this in here for
+development purposes.
+
+theoretically only works for 32 bit linux (and might only work for mine? don't
+know, copying this out without including all the autoconf stuff might have
+broken things, but i don't think so...)

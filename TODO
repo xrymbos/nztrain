@@ -1,0 +1,31 @@
+When users sign up, give them a group that they are in and only they are in
+There are *no* groups that can administrate this group.
+
+move headers (stuff like "Editing problem XYZ") somewhere less space wastey
+
+zip file upload of test data (in -> out, i -> o, in -> ans) (started)
+    rename zipped_test_data controller to bulk_test_data_upload_controller
+    (i.e. handle multiple formats, not just zip)
+    get this to also zip up all the test data and download it.
+
+"thanks" page giving creds (e.g. shoutoutz to the moe crew, etc)
+
+write some unit tests before this shit gets out of hand
+
+TODO publically available / suggestion box / wishlist
+
+* make it easy to turn exams directly into training site problem sets
+* support for translations of tasks
+* ioi 2010-style test data categories: "public", "release", "secret"
+* ioi 2010-style release tokens - (see http://marmoset.cs.umd.edu/)
+* support for a judging queue
+* support for trial runs
+* make it easy to extend time for specific students in a contest
+* flexible problem types (e.g. output only, reactive in many different forms (stdio/library), single submitted data file).
+
+recapture to login (domain specific, need to do laterz)
+
+problem view page:
+    display preferences (hide completed, sort by date completed, sort by group, sort by difficulty, show only graph theory, etc)
+    big red cross next to problems we want them to finish
+    big green tick next to problems that they have finished

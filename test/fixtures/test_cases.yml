@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  data: 
+  weight: 1
+  problem: 
+
+two:
+  data: 
+  weight: 1
+  problem: 

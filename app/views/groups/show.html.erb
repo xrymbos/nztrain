@@ -1,0 +1,12 @@
+TODO: change group listings to list usernames, not emails.
+<ul>
+  <% @group.users.each do |user| %>
+    <li>
+      <%= user.email %>
+    </li>
+  <% end %>
+</ul>
+    
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>

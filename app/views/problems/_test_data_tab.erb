@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <th>Input</th>
+    <th>Output</th>
+    <th>Points</th>
+    <th></th>
+  </tr>
+  <% @problem.test_cases.each do |test_case| %>
+    <tr>
+      <td><pre><%= test_case.input.length < 50 ? test_case.input : "input too big" %></pre></td>
+      <td><pre><%= test_case.output.length < 50 ? test_case.output : "output too big" %></pre></td>
+      <td><%= test_case.points %></td>
+      <td><%= link_to "Show", test_case %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= render 'zipped_test_data/form' %>
+
+<%= link_to 'new test case', new_test_case_path(:problem => @problem.id) %>

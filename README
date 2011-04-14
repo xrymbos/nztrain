@@ -1,0 +1,40 @@
+== About
+
+nztrain is an open source automarking system designed with IOI training in mind.
+
+This revision is unstable, not ready for use.
+
+== Setting Up
+
+get ruby, rubygems, bundle, then type bundle in the project directory.
+
+Build the sandbox in the moe directory (it's just one .c file) and put "box" in
+the path somewhere. (atm this only works on 32 bit linux or something, plans to
+expand in the future)
+
+== Credits
+
+Special thanks go to Margot who's super awesome support and enthusiasm drives
+the entire New Zealand IOI scene. Without her, none of it would be (incl this)
+
+Cheers to the aioc folk (esp bab + brb), orac was where we grew up and learned
+all this stuff.
+
+Then we've got greetz out to the Moe crew with their Moe Contest Environment
+(we use their sandbox, box.c). It's part of their complete package for contests
+at http://www.ucw.cz/moe/
+
+Thanks out to the rails community (omfg your stuff is amazing) and whoever is
+responsible for the existence of ruby (omfg your stuff is amazing) and jquery
+(omfg your stuff is amazing) and jqueryui (omfg your stuff is amazing)
+
+== License
+
+nztrain will be released under some license at some point (maybe gnu gpl?)
+Moe can be used and distributed under the terms of the GNU General Public License version 2.
+Rails is released under the MIT license. Ruby under the Ruby License.
+
+http://jquery.org/license
+http://www.gnu.org/copyleft/gpl.html
+http://www.opensource.org/licenses/mit-license.php
+http://www.ruby-lang.org/en/LICENSE.txt
