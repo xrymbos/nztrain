@@ -1,0 +1,15 @@
+Users: purpose clear
+Groups:
+    groups of users.
+    All ACL is done on *groups*
+    Each user gets a group with only them in it when they register
+        no group is an administrator of this group.
+    ACL on groups is all a simple "read, write, admin" ala moinmoin
+Problems:
+    ACL:
+        - list of groups that can change or delete this
+        - list of groups that can specify this inclusion of this in a set
+ProblemSets:
+    ACL:
+        - list of groups who can change what's in this set / delete it
+        - list of groups who can submit to this problem

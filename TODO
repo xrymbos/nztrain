@@ -8,6 +8,8 @@ zip file upload of test data (in -> out, i -> o, in -> ans) (started)
     (i.e. handle multiple formats, not just zip)
     get this to also zip up all the test data and download it.
 
+Revisions on changes to problems / problem sets?
+
 "thanks" page giving creds (e.g. shoutoutz to the moe crew, etc)
 
 write some unit tests before this shit gets out of hand
