@@ -1,5 +1,5 @@
 <%-# TODO: change this to zipped_test_data_upload_path -%>
-<%= form_tag(bulk_data_upload_path, :html => {:multipart => true}) do %>
+<%= form_tag(bulk_data_upload_path, :multipart => true) do %>
   <%-# TODO: this seems like a kinda dirty, unclean solution... how should we get @problem.id in here? -%>
   <%= hidden_field_tag :problem_id, @problem.id %>
   <div class="field">

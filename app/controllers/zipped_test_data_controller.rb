@@ -1,7 +1,6 @@
 # should probably make a model for this...
 
 require 'zip/zip'
-require 'zip/zipfile'
 
 class ZippedTestDataController < ApplicationController
   # POST /test_cases/bulk_upload
@@ -15,7 +14,7 @@ class ZippedTestDataController < ApplicationController
     Zip::ZipInputStream.open(params[:test_cases_zip].path) do |zip|
       while entry = zip.get_next_entry
         if entry.file?
-          files_in_zip[entry.name] = entry.read
+          files_in_zip[entry.name] = entry.get_input_stream.read
         end
       end
     end
@@ -23,7 +22,7 @@ class ZippedTestDataController < ApplicationController
     [["in", "out"], ["in", "ans"], ["i", "o"]].each do |replacement|
       file_counts = Hash.new(0)
       files_in_zip.each_key do |filename|
-        other_filename = filename.gsub replacement
+        other_filename = filename.gsub replacement[0], replacement[1]
         if filename != other_filename
           file_counts[filename] += 1
           file_counts[other_filename] += 1
@@ -36,7 +35,8 @@ class ZippedTestDataController < ApplicationController
       if worked
         valid_zip = true
         files_in_zip.each do |filename, contents|
-          other_filename = filename.gsub replacement
+          other_filename = filename.gsub replacement[0], replacement[1]
+          logger.debug "input: #{contents} output: #{files_in_zip[other_filename]}"
           if filename != other_filename
             TestCase.create(:input => contents,
                             :output => files_in_zip[other_filename],
